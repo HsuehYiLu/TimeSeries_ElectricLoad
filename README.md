@@ -129,4 +129,49 @@ For the final model selected in this project is a SARIMA model, which only fit w
 On the other hand, the LSMT deep learning model performed better but the training time takes much longer than traditional time series model like SARIMA. Although the error is smaller than traditional model but if we discuss about efficiency, I will say that traditional model is better for dataset that is too large. However, if you get enough time and ram for training model, deep learning model like LSMT will be a better choice.
 
 
+## Required Packages
+
+The following packages need to be imported for the code to run correctly:
+
+### Data Analysis and Visualization
+
+- pandas: `import pandas as pd`
+- matplotlib: `import matplotlib.pyplot as plt`
+- numpy: `import numpy as np`
+- seaborn: `import seaborn as sns`
+
+### Time Series Analysis
+
+- statsmodels.tsa.stattools: 
+  - adfuller: `from statsmodels.tsa.stattools import adfuller`
+  - kpss: `from statsmodels.tsa.stattools import kpss`
+- statsmodels.graphics.tsaplots: 
+  - plot_acf: `from statsmodels.graphics.tsaplots import plot_acf`
+  - plot_pacf: `from statsmodels.graphics.tsaplots import plot_pacf`
+- scipy.stats: `from scipy.stats import chi2`
+- statsmodels.api: `import statsmodels.api as sm`
+- statsmodels.tsa.seasonal: `from statsmodels.tsa.seasonal import STL`
+- statsmodels.tsa.holtwinters: `import statsmodels.tsa.holtwinters as ets`
+
+### Feature Selection
+
+- numpy.linalg: `from numpy import linalg as LA`
+- sklearn.ensemble.RandomForestClassifier: `from sklearn.ensemble import RandomForestClassifier`
+- sklearn.feature_selection.SelectFromModel: `from sklearn.feature_selection import SelectFromModel`
+- sklearn.ensemble.RandomForestRegressor: `from sklearn.ensemble import RandomForestRegressor`
+- sklearn.model_selection.train_test_split: `from sklearn.model_selection import train_test_split`
+
+### LSTM
+
+- numpy: `import numpy`
+- pandas: `import pandas`
+- math: `import math`
+- keras.models.Sequential: `from keras.models import Sequential`
+- keras.layers.Dense: `from keras.layers import Dense`
+- keras.layers.LSTM: `from keras.layers import LSTM`
+- sklearn.preprocessing.MinMaxScaler: `from sklearn.preprocessing import MinMaxScaler`
+- sklearn.metrics.mean_squared_error: `from sklearn.metrics import mean_squared_error`
+
+
+
 
