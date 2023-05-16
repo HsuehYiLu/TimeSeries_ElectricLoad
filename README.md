@@ -18,15 +18,15 @@ The dataset used in this project is sourced from Kaggle and includes electricity
 
 Time versus load
 
-<img src="img/Load.png">
+<img src="img/Load.png" width="400">
 
 ACF/PACF of the dependent variable
 
-<img src="img/AR.png">
+<img src="img/AR.png" width="400">
 
 Correlation matrix
 
-<img src="img/CM.png">
+<img src="img/CM.png" width="400">
 
 
 ## Preprocessing
@@ -37,7 +37,7 @@ The preprocessing section describes the steps taken to clean and prepare the dat
 
 Rolling mean and variance of load of North
 
-<img src="img/RM.png">
+<img src="img/RM.png" width="400">
 
 The stationarity section examines the stationarity of the data using ADF and KPSS tests, as well as rolling mean and variance analysis.
 
@@ -45,13 +45,14 @@ The stationarity section examines the stationarity of the data using ADF and KPS
 
 The result of trending and seasonality of the original data
 
-<img src="img/Decomposition.png">
+<img src="img/Decomposition.png" width="400">
 
 The time series decomposition section applies the STL (Seasonal-Trend decomposition using Loess) method to analyze the trending and seasonality components of the data.
 
 ## Holt-Winters Method
 
-<img src="img/HW.png">
+<img src="img/HW.png" width="400">
+
 The Holt-Winters method is implemented to forecast electricity load using the train dataset and evaluate its performance against the test dataset.
 
 ## Feature Selection
@@ -66,11 +67,11 @@ Several base models, including AFM, Naïve, Drift, and SES, are implemented to e
 A multiple linear regression model is developed using the OLS (Ordinary Least Squares) method and evaluated based on statistical criteria and prediction accuracy.
 One-step prediction of model
 
-<img src="img/Onestep.png">
+<img src="img/Onestep.png" width="400">
 
 H-step prediction of model
 
-<img src="img/Hstep.png">
+<img src="img/Hstep.png" width="400">
 
 ## ARMA, ARIMA, and SARIMA Model
 
