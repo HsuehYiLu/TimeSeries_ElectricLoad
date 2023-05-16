@@ -17,12 +17,15 @@ The introduction section introduces the project and outlines the various steps i
 The dataset used in this project is sourced from Kaggle and includes electricity load data and weather data for Taiwan from 2017 to 2021. The dataset consists of several variables, including time series data, categorical variables, and numerical variables related to weather and climate factors.
 
 Time versus load
+
 <img src="img/Load.png">
 
 ACF/PACF of the dependent variable
+
 <img src="img/AR.png">
 
 Correlation matrix
+
 <img src="img/CM.png">
 
 
@@ -33,6 +36,7 @@ The preprocessing section describes the steps taken to clean and prepare the dat
 ## Stationarity
 
 Rolling mean and variance of load of North
+
 <img src="img/RM.png">
 
 The stationarity section examines the stationarity of the data using ADF and KPSS tests, as well as rolling mean and variance analysis.
@@ -40,7 +44,9 @@ The stationarity section examines the stationarity of the data using ADF and KPS
 ## Time Series Decomposition
 
 The result of trending and seasonality of the original data
+
 <img src="img/Decomposition.png">
+
 The time series decomposition section applies the STL (Seasonal-Trend decomposition using Loess) method to analyze the trending and seasonality components of the data.
 
 ## Holt-Winters Method
@@ -59,9 +65,11 @@ Several base models, including AFM, Naïve, Drift, and SES, are implemented to e
 ## Multiple Linear Regression
 A multiple linear regression model is developed using the OLS (Ordinary Least Squares) method and evaluated based on statistical criteria and prediction accuracy.
 One-step prediction of model
+
 <img src="img/Onestep.png">
 
 H-step prediction of model
+
 <img src="img/Hstep.png">
 
 ## ARMA, ARIMA, and SARIMA Model
