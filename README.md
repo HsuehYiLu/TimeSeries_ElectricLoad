@@ -78,6 +78,8 @@ H-step prediction of model
 
 ARMA, ARIMA, and SARIMA models are tested to analyze the stationarity of the data and select the best-fitting model for prediction.
 
+By observing the ACF/PACF plot that generated in the previous section, through ACF I’ll guess that there might be a 24 lags period of the data, and by PACF I’ll guess there might be an order of AR.
+
 GPAC table of original data
 
 <img src="img/GPAC.png" width="400">
@@ -105,6 +107,12 @@ The best-performing models, including LSTM and SARIMA, are compared based on the
 
 The forecast function section presents the final forecast function derived from the selected ARIMA model.
 
+For the forecast function, I’m using the ARIMA(24,1,0) model, which is the best model with a presentable forecast function. 
+
+Function:
+𝑦(𝑡) – 0.16*𝑦(𝑡 − 1) – 0.5*𝑦(𝑡 − 24)= 𝑒(𝑡)
+
+
 ## h-step Ahead Predictions
 
 SARIMA model prediction
@@ -117,6 +125,53 @@ The h-step ahead predictions section showcases the predictions made by the selec
 
 ## Summary and Conclusion
 
-The summary and conclusion section provides an overview of the project, its findings, and the significance of the analysis in understanding the relationship between electricity load and weather factors in Taiwan.
+For the final model selected in this project is a SARIMA model, which only fit with time series data but can’t predict using other features. Although the original goal of this project is to find out if the weather data is connected to the electricity load, the performance of pure time series prediction using SARIMA model and LSMT is better. 
+On the other hand, the LSMT deep learning model performed better but the training time takes much longer than traditional time series model like SARIMA. Although the error is smaller than traditional model but if we discuss about efficiency, I will say that traditional model is better for dataset that is too large. However, if you get enough time and ram for training model, deep learning model like LSMT will be a better choice.
+
+
+## Required Packages
+
+The following packages need to be imported for the code to run correctly:
+
+### Data Analysis and Visualization
+
+- pandas: `import pandas as pd`
+- matplotlib: `import matplotlib.pyplot as plt`
+- numpy: `import numpy as np`
+- seaborn: `import seaborn as sns`
+
+### Time Series Analysis
+
+- statsmodels.tsa.stattools: 
+  - adfuller: `from statsmodels.tsa.stattools import adfuller`
+  - kpss: `from statsmodels.tsa.stattools import kpss`
+- statsmodels.graphics.tsaplots: 
+  - plot_acf: `from statsmodels.graphics.tsaplots import plot_acf`
+  - plot_pacf: `from statsmodels.graphics.tsaplots import plot_pacf`
+- scipy.stats: `from scipy.stats import chi2`
+- statsmodels.api: `import statsmodels.api as sm`
+- statsmodels.tsa.seasonal: `from statsmodels.tsa.seasonal import STL`
+- statsmodels.tsa.holtwinters: `import statsmodels.tsa.holtwinters as ets`
+
+### Feature Selection
+
+- numpy.linalg: `from numpy import linalg as LA`
+- sklearn.ensemble.RandomForestClassifier: `from sklearn.ensemble import RandomForestClassifier`
+- sklearn.feature_selection.SelectFromModel: `from sklearn.feature_selection import SelectFromModel`
+- sklearn.ensemble.RandomForestRegressor: `from sklearn.ensemble import RandomForestRegressor`
+- sklearn.model_selection.train_test_split: `from sklearn.model_selection import train_test_split`
+
+### LSTM
+
+- numpy: `import numpy`
+- pandas: `import pandas`
+- math: `import math`
+- keras.models.Sequential: `from keras.models import Sequential`
+- keras.layers.Dense: `from keras.layers import Dense`
+- keras.layers.LSTM: `from keras.layers import LSTM`
+- sklearn.preprocessing.MinMaxScaler: `from sklearn.preprocessing import MinMaxScaler`
+- sklearn.metrics.mean_squared_error: `from sklearn.metrics import mean_squared_error`
+
+
 
 
