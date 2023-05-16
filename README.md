@@ -65,6 +65,7 @@ Several base models, including AFM, Naïve, Drift, and SES, are implemented to e
 
 ## Multiple Linear Regression
 A multiple linear regression model is developed using the OLS (Ordinary Least Squares) method and evaluated based on statistical criteria and prediction accuracy.
+
 One-step prediction of model
 
 <img src="img/Onestep.png" width="400">
@@ -77,15 +78,22 @@ H-step prediction of model
 
 ARMA, ARIMA, and SARIMA models are tested to analyze the stationarity of the data and select the best-fitting model for prediction.
 
+GPAC table of original data
+
+<img src="img/GPAC.png" width="400">
+
 ## Levenberg Marquardt Algorithm
 
 The Levenberg Marquardt algorithm is applied to fit the data into the selected ARIMA model, and diagnostic tests are conducted to assess the model's performance.
+
 
 ## Diagnostic Analysis
 
 The diagnostic analysis section includes various tests and assessments, such as confidence intervals, zero/pole cancellation, chi-square tests, and analysis of residual variance.
 
 ## Deep Learning Model
+
+<img src="img/LSTM.png" width="400">
 
 A LSTM (Long Short-Term Memory) deep learning model is implemented to forecast electricity load, and its performance is evaluated based on training and testing scores.
 
@@ -99,7 +107,13 @@ The forecast function section presents the final forecast function derived from 
 
 ## h-step Ahead Predictions
 
+SARIMA model prediction
+
+<img src="img/SARIMA.png" width="400">
+
 The h-step ahead predictions section showcases the predictions made by the selected model compared to the actual test data.
+
+
 
 ## Summary and Conclusion
 
